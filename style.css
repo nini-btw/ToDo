@@ -1,0 +1,219 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "montserrat", sans-serif;
+}
+
+main {
+  display: block;
+}
+main section {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+}
+
+.greeting .title,
+.greeting input {
+  font-weight: 700;
+  font-size: 1.5rem;
+  color: #313154;
+}
+
+.greeting .title {
+  display: flex;
+}
+.greeting .title input {
+  margin-left: 0.5rem;
+  flex: 1 1 0%;
+  min-width: 0;
+}
+
+input:not([type=radio]):not([type=checkbox]),
+button {
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  border: none;
+  outline: none;
+  background: none;
+}
+
+h3, h4 {
+  font-size: 0.875rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+
+h3 {
+  color: #313154;
+}
+
+h4 {
+  color: #888;
+}
+
+#new-todo-form input[type=text] {
+  width: 100%;
+  display: block;
+  font-size: 1.125rem;
+  background-color: #fff;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  border-radius: 0.5rem;
+  padding: 1rem 1.5rem;
+  margin-bottom: 1.5rem;
+  color: #313154;
+}
+#new-todo-form input[type=submit] {
+  font-weight: bold;
+  font-size: 1rem;
+  display: grid;
+  text-align: center;
+  background-color: #EA40A4;
+  border-radius: 0.5rem;
+  color: #fff;
+  margin-bottom: 1.5rem;
+  padding: 1rem 1.5rem;
+  width: 100%;
+  cursor: pointer;
+}
+#new-todo-form .option {
+  margin-bottom: 1.5rem;
+  display: grid;
+  grid-gap: 1rem;
+  grid-template-columns: repeat(2, 1fr);
+}
+#new-todo-form .option label {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #fff;
+  border-radius: 0.5rem;
+  padding: 1.5rem;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+}
+#new-todo-form .option label div {
+  color: #313154;
+}
+#new-todo-form .option label.active span::after {
+  opacity: 1;
+}
+
+.bubble {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 1rem;
+  height: 1rem;
+  border-radius: 50%;
+  border: 0.125rem solid;
+  cursor: pointer;
+  position: relative;
+}
+.bubble::after {
+  position: absolute;
+  content: "";
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 0.5rem;
+  height: 0.5rem;
+  border-radius: 50%;
+  transition: 0.2s ease-in-out;
+  opacity: 0;
+  cursor: pointer;
+}
+.bubble.personal {
+  border-color: #EA40A4;
+}
+.bubble.personal::after {
+  background-color: #EA40A4;
+  box-shadow: 0px 0px 4px rgba(234, 64, 164, 0.75);
+}
+.bubble.business {
+  border-color: #3a82ee;
+}
+.bubble.business::after {
+  background-color: #3a82ee;
+  box-shadow: 0px 0px 4px rgba(58, 130, 238, 0.75);
+}
+
+input[type=radio], input[type=checkbox] {
+  display: none;
+}
+
+section.todo-list {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+}
+
+.list .todo-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem;
+  width: 100%;
+  margin-bottom: 1.5rem;
+  padding: 1rem 1.5rem;
+  background-color: #fff;
+  border-radius: 0.5rem;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+.list .todo-item .left {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.list .todo-item .left .todo-content input {
+  display: block;
+  font-size: 1rem;
+  color: #313154;
+}
+.list .todo-item .left .todo-content.done {
+  position: relative;
+}
+.list .todo-item .left .todo-content.done::after {
+  content: "";
+  position: absolute;
+  width: calc(100% - 1rem);
+  height: 0.125rem;
+  background-color: #313154;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+}
+.list .todo-item label {
+  width: 2rem;
+  currsor: pointer;
+}
+.list .todo-item .action {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+.list .todo-item .action button {
+  padding: 0.5rem 0.5rem;
+  color: #fff;
+  border-radius: 0.5rem;
+  cursor: pointer;
+}
+.list .todo-item .action button.edit {
+  background-color: #EA40A4;
+}
+.list .todo-item .action button.delete {
+  background-color: #ff5b57;
+  margin-left: 1rem;
+}
+
+.todo-item label.active span::after {
+  opacity: 1;
+}/*# sourceMappingURL=style.css.map */

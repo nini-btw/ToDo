@@ -1,0 +1,42 @@
+
+<DOCTYPE></DOCTYPE>
+<html lang="en"></html>
+<head><link href="https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@0,400;0,700;0,900;1,400&amp;family=Montserrat:ital,wght@0,400;0,700;0,900;1,400&amp;display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+  <link rel="stylesheet" href="style.css"/>
+  <meta charset="UTF-8"/>
+  <title>ToDo</title>
+</head>
+<body>
+  <main>
+    <section class="greeting">
+      <h2 class="title">What's up,
+        <input type="text" placeholder="User" id="name"/>
+      </h2>
+    </section>
+    <section class="create-todo">
+      <h3>CREATE A TODO</h3>
+      <form id="new-todo-form">
+        <h4>What's on your todo?</h4>
+        <input type="text" placeholder="e.g. Get some milk" name="content"/>
+        <h4>Pick a category</h4>
+        <div class="option">
+          <label class="business">
+            <input type="radio" name="category" value="business" id="category1"/><span class="bubble business"></span>
+            <div>Business</div>
+          </label>
+          <label class="personal">
+            <input type="radio" name="category" value="personal" id="category2"/><span class="bubble personal"></span>
+            <div>Personal</div>
+          </label>
+        </div>
+        <input type="submit" value="ADD TODO"/>
+      </form>
+    </section>
+    <section class="todo-list">
+      <h3>TODO LIST</h3>
+      <div class="list" id="todo-list"></div>
+    </section>
+  </main>
+  <script src="main.js"></script>
+</body>
